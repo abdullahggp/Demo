@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="Javascriptreact">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Click</button>
+    <script>
+      let btn = document.getElementById("btn");
+      let body = document.body;
+     let arr = ["white", "red", "blue", "green", "yellow"];
+     let index = 0;
+
+      btn.addEventListener("click", () => {
+        body.style.backgroundColor = arr[index];
+        index++
+        if(index >= arr.length){
+            index = 0;
+        }
+      });
+    </script>
+  </body>
+</html>
